@@ -1,52 +1,58 @@
-# Template de Portfólio para Organização no GitHub Pages
+# Template React + Vite + Tailwind para GitHub Pages (Org)
 
-## Como publicar no GitHub Pages da organização
+Este projeto é um template de site institucional para uma organização no GitHub Pages.
 
-1. Cria um repositório com o nome exato:
-   `nome-da-org.github.io`
+## 1. Instalar dependências
 
-2. Faz upload destes ficheiros para esse repositório:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
+```bash
+npm install
+```
 
-3. No GitHub, vai a:
-   `Settings > Pages`
+## 2. Correr localmente
 
-4. Em **Build and deployment**:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/root**
+```bash
+npm run dev
+```
 
-5. Guarda e espera alguns segundos.
+## 3. Gerar build
 
-O site deverá ficar disponível em:
-`https://nome-da-org.github.io`
+```bash
+npm run build
+```
 
----
+A pasta gerada será `dist/`.
 
-## O que convém personalizar
+## 4. Publicar no GitHub Pages da organização
 
-### No `index.html`
-- `NomeOrg`
-- Título da página
-- Descrição
-- Serviços
-- Projetos
-- Equipa
-- Contactos
-- Links reais da organização
+Cria um repositório com este nome exato:
 
-### No `styles.css`
-- Cores
-- Espaçamentos
-- Tipografia
+```bash
+nome-da-org.github.io
+```
 
----
+Exemplo:
 
-## Domínio personalizado
+```bash
+dev2grow.github.io
+```
 
-Se tiveres um domínio próprio, podes associá-lo em:
-`Settings > Pages > Custom domain`
+Depois tens duas opções:
 
-Depois tens de configurar os registos DNS no teu fornecedor de domínio.
+### Opção A — publicar a pasta `dist`
+Fazes o build localmente e envias o conteúdo da pasta `dist/` para o branch que estiver configurado para o GitHub Pages.
+
+### Opção B — GitHub Actions
+Podes configurar um workflow para fazer deploy automático sempre que fizeres push.
+
+## 5. Personalização rápida
+
+Edita estes pontos:
+
+- `src/App.jsx` → textos, secções e conteúdos
+- `index.html` → título e descrição
+- links de contacto
+- nome da organização
+
+## Nota
+
+Se o site for publicado na raiz `https://nome-da-org.github.io`, não precisas de mexer no `base` do Vite.
