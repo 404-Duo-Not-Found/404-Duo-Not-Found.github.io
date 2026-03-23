@@ -1,1 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nome da Organização</title>
+  <meta name="description" content="Site institucional e portfólio da organização." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <span class="logo-mark">O</span>
+        <span>NomeOrg</span>
+      </a>
 
+      <nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#equipa">Equipa</a></li>
+          <li><a href="#contactos">Contactos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Organização · Tecnologia · Inovação</p>
+          <h1>Construímos soluções digitais com impacto real.</h1>
+          <p class="hero-text">
+            Este template foi pensado para apresentar uma organização, os seus serviços,
+            projetos e equipa de forma moderna e profissional no GitHub Pages.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+            <a href="#contactos" class="btn btn-secondary">Entrar em contacto</a>
+          </div>
+
+          <div class="hero-stats">
+            <div>
+              <strong>12+</strong>
+              <span>Projetos</span>
+            </div>
+            <div>
+              <strong>8</strong>
+              <span>Membros</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Disponibilidade</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="panel">
+            <p class="panel-title">Resumo rápido</p>
+            <ul>
+              <li>Site estático compatível com GitHub Pages</li>
+              <li>Design responsivo</li>
+              <li>Secções fáceis de editar</li>
+              <li>Pronto para domínio personalizado</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container two-col">
+        <div>
+          <p class="section-label">Sobre nós</p>
+          <h2>Uma presença digital simples, credível e bem apresentada.</h2>
+        </div>
+        <div>
+          <p>
+            A <strong>NomeOrg</strong> é uma organização focada em criar produtos,
+            serviços e experiências digitais. Este espaço pode ser usado para mostrar
+            a missão, visão, valores e principais áreas de atuação.
+          </p>
+          <p>
+            Como está alojado no GitHub Pages, o site é fácil de manter, rápido e ideal
+            para um portfólio institucional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="servicos">
+      <div class="container">
+        <p class="section-label">Serviços</p>
+        <h2>O que a organização faz</h2>
+
+        <div class="cards three">
+          <article class="card">
+            <h3>Desenvolvimento Web</h3>
+            <p>Criação de websites, plataformas internas e interfaces modernas.</p>
+          </article>
+          <article class="card">
+            <h3>UI/UX Design</h3>
+            <p>Definição de fluxos, prototipagem e experiências centradas no utilizador.</p>
+          </article>
+          <article class="card">
+            <h3>Consultoria Técnica</h3>
+            <p>Apoio na estruturação de soluções, stack e boas práticas de desenvolvimento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <p class="section-label">Projetos</p>
+        <h2>Trabalhos em destaque</h2>
+
+        <div class="cards three">
+          <article class="project-card">
+            <span class="tag">Website</span>
+            <h3>Projeto Alpha</h3>
+            <p>Landing page institucional com foco em performance e conversão.</p>
+            <a href="#">Ver projeto</a>
+          </article>
+          <article class="project-card">
+            <span class="tag">Dashboard</span>
+            <h3>Projeto Beta</h3>
+            <p>Painel interno para gestão de dados, métricas e operações.</p>
+            <a href="#">Ver projeto</a>
+          </article>
+          <article class="project-card">
+            <span class="tag">App</span>
+            <h3>Projeto Gamma</h3>
+            <p>Solução digital desenhada para melhorar processos e comunicação.</p>
+            <a href="#">Ver projeto</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="equipa">
+      <div class="container">
+        <p class="section-label">Equipa</p>
+        <h2>Quem está por trás</h2>
+
+        <div class="cards four">
+          <article class="member-card">
+            <div class="avatar">FC</div>
+            <h3>Nome Apelido</h3>
+            <p>Coordenador</p>
+          </article>
+          <article class="member-card">
+            <div class="avatar">AB</div>
+            <h3>Nome Apelido</h3>
+            <p>Developer</p>
+          </article>
+          <article class="member-card">
+            <div class="avatar">CD</div>
+            <h3>Nome Apelido</h3>
+            <p>Designer</p>
+          </article>
+          <article class="member-card">
+            <div class="avatar">EF</div>
+            <h3>Nome Apelido</h3>
+            <p>Gestão de Projeto</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contactos">
+      <div class="container contact-box">
+        <div>
+          <p class="section-label">Contactos</p>
+          <h2>Vamos falar?</h2>
+          <p>
+            Atualiza esta secção com o email da organização, redes sociais,
+            localização e qualquer call-to-action que faça sentido.
+          </p>
+        </div>
+        <div class="contact-list">
+          <a href="mailto:geral@nomeorg.com">geral@nomeorg.com</a>
+          <a href="#">GitHub</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© <span id="year"></span> NomeOrg. Todos os direitos reservados.</p>
+      <a href="#home">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
