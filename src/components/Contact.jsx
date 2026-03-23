@@ -22,7 +22,7 @@ export default function Contact() {
 
           <a
             className="rounded-xl border border-white/15 px-5 py-3 font-medium"
-            href="https://github.com/"
+            href="https://github.com/orgs/404-Duo-Not-Found"
           >
             {t("contact.org_github")}
           </a>

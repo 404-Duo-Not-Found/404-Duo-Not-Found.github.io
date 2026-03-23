@@ -1,3 +1,136 @@
 {
-  "org_name": "404 Duo Not Found"
+  "org_name": "404 Duo Not Found",
+  "header": {
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "team": "Team",
+    "contact": "Contact",
+    "menu": "Menu",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu"
+  },
+  "about": {
+    "eyebrow": "About Us",
+    "title": "A digital presence for your business",
+    "description": "At 404 Duo Not Found, we create custom, high-quality websites to help your business stand out online. We offer innovative solutions that combine aesthetics and functionality. From conception to implementation, we work with you to create a digital presence that reflects the unique identity of your business and attracts customers effectively.",
+    "items": [
+      {
+        "title": "Custom Design",
+        "description": "We create unique and personalized designs that reflect your business's identity and attract customers effectively."
+      },
+      {
+        "title": "Scalable Structure",
+        "description": "We develop websites with a scalable structure, allowing your business to grow without technical concerns."
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together",
+    "description": "If you're interested in creating a custom website for your business or have any questions, don't hesitate to get in touch with us. We're here to help you achieve your online goals. Send us an email, and we'll respond as soon as possible.",
+    "org_github": "Visit our GitHub repository"
+  },
+  "hero": {
+    "eyebrow": "Fast, professional solutions designed to generate results",
+    "title": "Everything your business needs, in one click",
+    "description": "We create tailored solutions for brands, local businesses, and companies that need a serious digital presence.",
+    "projects": "See projects",
+    "cta": "Schedule a meeting",
+    "side_panel" : {
+      "title": "Why choose us?",
+      "items": [
+        {
+          "icon": "<Zap />",
+          "title": "Performance"
+        },
+        {
+          "icon": "<Component />",
+          "title": "Modern Design"
+        },
+        {
+          "icon": "<Proportions />",
+          "title": "Responsive"
+        },
+        {
+          "icon": "<ShieldCheck />",
+          "title": "Security"
+        },
+        {
+          "icon": "<ChevronsUp />",
+          "title": "SEO Optimization"
+        },
+        {
+          "icon": "<Wrench />",
+          "title": "Maintability"
+        }
+      ]
+    }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What we offer",
+    "description": "At 404 Duo Not Found, we offer a range of services to help your business establish a strong online presence. Our services include:",
+    "items": [
+      {
+      "title": "Web Development",
+      "description": "Building modern, fast and scalable platforms for digital products and teams."
+      },
+      {
+      "title": "Apps and Interfaces",
+      "description": "Intuitive experiences focused on performance, design and usability."
+      },
+      {
+      "title": "Automation and Integrations",
+      "description": "Connecting systems, APIs and internal workflows to reduce manual work."
+      }
+    ]
+  },
+  "projetos": {
+    "eyebrow": "Projects",
+    "title": "Our work",
+    "description": "At 404 Duo Not Found, we take pride in the projects we've completed for our clients. Here are some examples of our work:",
+    "items": [
+      {
+        "title": "Project 1",
+        "tag": "E-commerce",
+        "description": "Description of project 1."
+      },
+      {
+        "title": "Project 2",
+        "tag": "Corporate Website",
+        "description": "Description of project 2."
+      },
+      {
+        "title": "Project 3",
+        "tag": "Portfolio",
+        "description": "Description of project 3."
+      },
+      {
+        "title": "Project 4",
+        "tag": "Blog",
+        "description": "Description of project 4."
+      },
+      {
+        "title": "Project 5",
+        "tag": "Custom Solution",
+        "description": "Description of project 5."
+      },
+      {
+        "title": "Project 6",
+        "tag": "Corporate Website",
+        "description": "Description of project 6."
+      }
+    ]
+  },
+  "team": {
+    "eyebrow": "Team",
+    "title": "Meet our team",
+    "description": "At 404 Duo Not Found, we have a talented and dedicated team of professionals who are passionate about creating exceptional websites for our clients. Our team includes:",
+    "team_members": [
+      { "name": "Fábio Casalão", "role": "Developer" },
+      { "name": "Rafael Silva", "role": "Developer" }
+    ]
+  }
+
 }
