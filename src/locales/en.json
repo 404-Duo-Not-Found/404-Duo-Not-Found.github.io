@@ -132,6 +132,21 @@
       { "name": "Fábio Casalão", "role": "Developer" },
       { "name": "Rafael Silva", "role": "Developer" }
     ]
+  },
+  "email_modal": {
+    "contact": "Contact",
+    "send_email": "Send Email",
+    "description": "Fill out the form below and send your message directly from the website.",
+    "name": "Name",
+    "name_placeholder": "Your name",
+    "email": "Email",
+    "message": "Message",
+    "message_placeholder": "Write your message...",
+    "success": "Message sent successfully.",
+    "error": "Something went wrong. Please try again.",
+    "cancel": "Cancel",
+    "sending": "Sending...",
+    "send": "Send"
   }
 
 }

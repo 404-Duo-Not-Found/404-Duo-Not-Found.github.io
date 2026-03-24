@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import {Send} from 'lucide-react'
+import {X, Send} from 'lucide-react'
+
+import { useTranslation } from 'react-i18next'
 
 export default function EmailModal({ triggerText = 'Send an email from website' }) {
   const [isOpen, setIsOpen] = useState(false)
   const [isSending, setIsSending] = useState(false)
   const [status, setStatus] = useState('')
   const formRef = useRef(null)
+
+  const { t } = useTranslation()
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? 'hidden' : ''
@@ -59,27 +63,18 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
               aria-label="Close email modal"
               className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition hover:bg-white/10 hover:text-white"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                className="h-5 w-5"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 6l12 12M18 6L6 18" />
-              </svg>
+              <X />
             </button>
 
             <div className="mb-8">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-sky-400">
-                Contact
+                {t('email_modal.contact')}
               </p>
               <h3 className="text-3xl font-bold tracking-tight text-white">
-                Send an email
+                {t('email_modal.send_email')}
               </h3>
               <p className="mt-3 max-w-xl text-slate-300">
-                Fill in the form below and send your message directly from the website.
+                {t('email_modal.description')}
               </p>
             </div>
 
@@ -87,20 +82,20 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
               <div className="grid gap-5 md:grid-cols-2">
                 <div>
                   <label className="mb-2 block text-sm font-medium text-slate-200">
-                    Name
+                    {t('email_modal.name')}
                   </label>
                   <input
                     type="text"
                     name="user_name"
                     required
-                    placeholder="Your name"
+                    placeholder={t('email_modal.name_placeholder')}
                     className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-sky-400/40 focus:bg-white/[0.07]"
                   />
                 </div>
 
                 <div>
                   <label className="mb-2 block text-sm font-medium text-slate-200">
-                    Email
+                    {t('email_modal.email')}
                   </label>
                   <input
                     type="email"
@@ -114,13 +109,13 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
 
               <div>
                 <label className="mb-2 block text-sm font-medium text-slate-200">
-                  Message
+                  {t('email_modal.message')}
                 </label>
                 <textarea
                   name="message"
                   required
                   rows="6"
-                  placeholder="Write your message..."
+                  placeholder={t('email_modal.message_placeholder')}
                   className="w-full resize-none rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-sky-400/40 focus:bg-white/[0.07]"
                 />
               </div>
@@ -135,7 +130,7 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
                       : 'bg-white text-slate-950 hover:opacity-90'
                   }`}
                 >
-                  {isSending ? 'Sending...' : 'Send email'}
+                  {isSending ? t('email_modal.sending') : t('email_modal.send')}
                 </button>
 
                 <button
@@ -143,19 +138,19 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
                   onClick={() => setIsOpen(false)}
                   className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 font-medium text-white transition hover:bg-white/10"
                 >
-                  Cancel
+                  {t('email_modal.cancel')}
                 </button>
               </div>
 
               {status === 'success' && (
                 <p className="text-sm text-emerald-400">
-                  Message sent successfully.
+                  {t('email_modal.success')}
                 </p>
               )}
 
               {status === 'error' && (
                 <p className="text-sm text-red-400">
-                  Something went wrong. Please try again.
+                  {t('email_modal.error')}
                 </p>
               )}
             </form>

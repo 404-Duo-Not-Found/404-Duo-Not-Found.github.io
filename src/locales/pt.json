@@ -133,5 +133,20 @@
       { "name": "Fábio Casalão", "role": "Developer" },
       { "name": "Rafael Silva", "role": "Developer" }
     ]
+  },
+  "email_modal": {
+    "contact": "Contacto",
+    "send_email": "Enviar email",
+    "description": "Preencha o formulário abaixo e envie sua mensagem diretamente do website.",
+    "name": "Nome",
+    "name_placeholder": "O seu nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "message_placeholder": "Escreva a sua mensagem...",
+    "success": "Mensagem enviada com sucesso.",
+    "error": "Algo correu mal. Por favor, tente novamente.",
+    "cancel": "Cancelar",
+    "sending": "Enviando...",
+    "send": "Enviar"
   }
 }
