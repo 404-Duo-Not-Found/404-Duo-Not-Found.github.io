@@ -8,7 +8,8 @@
     "contact": "Contato",
     "menu": "Menu",
     "open_menu": "Abrir menu",
-    "close_menu": "Fechar menu"
+    "close_menu": "Fechar menu",
+    "home": "Home"
   },
   "about": {
     "eyebrow": "Sobre Nós",
@@ -148,5 +149,29 @@
     "cancel": "Cancelar",
     "sending": "Enviando...",
     "send": "Enviar"
+  },
+  "projectsPage": {
+    "title": "Projetos",
+    "description": "Explora alguns dos projetos e trabalhos desenvolvidos."
+  },
+  "projects": {
+    "atlas": {
+      "tag": "Dashboard",
+      "title": "Project Atlas",
+      "description": "Plataforma de gestão com métricas, tarefas e acompanhamento de equipas.",
+      "content": "O Project Atlas foi desenvolvido para centralizar informação operacional e melhorar a visualização de métricas em tempo real."
+    },
+    "nova": {
+      "tag": "Website",
+      "title": "Project Nova",
+      "description": "Website institucional focado em presença digital e conversão.",
+      "content": "O Project Nova foi pensado para reforçar a credibilidade da marca e simplificar a comunicação com utilizadores."
+    },
+    "pulse": {
+      "tag": "Tool",
+      "title": "Project Pulse",
+      "description": "Ferramenta interna para automação de processos.",
+      "content": "O Project Pulse ajudou a reduzir trabalho repetitivo através de integrações e automatizações internas."
+    }
   }
 }

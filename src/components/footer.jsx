@@ -1,5 +1,16 @@
+import { useLocation } from 'react-router-dom'
+
 export default function Footer() {
   const year = new Date().getFullYear()
+
+  const location = useLocation()
+
+  const currentRoute = location.pathname
+
+  const isHome = currentRoute === '/'
+  const isProjects = currentRoute === '/projects'
+  // matches /projects/<anything> (e.g. /projects/1 or /projects/slug)
+  const isProjectDetail = /^\/projects\/[^/]+$/.test(currentRoute)
 
   return (
     <footer className="border-t border-white/10 bg-slate-950/80">
@@ -13,18 +24,35 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 text-left md:items-end">
           <div className="flex flex-wrap gap-4 text-slate-300">
-            <a href="#about" className="transition hover:text-white">
-              About
-            </a>
-            <a href="#services" className="transition hover:text-white">
-              Services
-            </a>
-            <a href="#projects" className="transition hover:text-white">
-              Projects
-            </a>
-            <a href="#contact" className="transition hover:text-white">
-              Contact
-            </a>
+            {
+              isHome && (
+                <>
+                  <a href="#about" className="transition hover:text-white">
+                    About
+                  </a>
+                  <a href="#services" className="transition hover:text-white">
+                    Services
+                  </a>
+                  <a href="#projects" className="transition hover:text-white">
+                    Projects
+                  </a>
+                  <a href="#contact" className="transition hover:text-white">
+                    Contact
+                  </a>
+                </>
+              )
+            }
+
+            {(isProjects || isProjectDetail) && (
+              <>
+                <a href="/" className="transition hover:text-white">
+                  Home
+                </a>
+                <a href="/projects" className="transition hover:text-white">
+                  Projects
+                </a>
+              </>
+            )}
           </div>
 
           <p className="text-slate-500">© {year} 404 Duo Not Found. All rights reserved.</p>

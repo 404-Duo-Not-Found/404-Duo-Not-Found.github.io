@@ -3,10 +3,16 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import useStore from '../store'
 
+import { useLocation } from 'react-router-dom'
+
 export default function Header() {
   const [open, setOpen] = useState(false)
   const language = useStore((state) => state.language)
   const setLanguage = useStore((state) => state.setLanguage)
+
+  const location = useLocation()
+
+  const currentRoute = location.pathname
 
   const {t} = useTranslation()
 
@@ -15,6 +21,11 @@ export default function Header() {
     setOpen(false)
   }
 
+  const isHome = currentRoute === '/'
+  const isProjects = currentRoute === '/projects'
+  // matches /projects/<anything> (e.g. /projects/1 or /projects/slug)
+  const isProjectDetail = /^\/projects\/[^/]+$/.test(currentRoute)
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -22,13 +33,26 @@ export default function Header() {
           {t("org_name")}
         </a>
 
-        <nav className="hidden gap-8 text-sm text-slate-300 md:flex">
-          <a href="#about" className="hover:text-white">{t("header.about")}</a>
-          <a href="#services" className="hover:text-white">{t("header.services")}</a>
-          <a href="#projects" className="hover:text-white">{t("header.projects")}</a>
-          <a href="#team" className="hover:text-white">{t("header.team")}</a>
-          <a href="#contact" className="hover:text-white">{t("header.contact")}</a>
-        </nav>
+        {
+          isHome && (
+            <nav className="hidden gap-8 text-sm text-slate-300 md:flex">
+              <a href="#about" className="hover:text-white">{t("header.about")}</a>
+              <a href="#services" className="hover:text-white">{t("header.services")}</a>
+              <a href="#projects" className="hover:text-white">{t("header.projects")}</a>
+              <a href="#team" className="hover:text-white">{t("header.team")}</a>
+              <a href="#contact" className="hover:text-white">{t("header.contact")}</a>
+            </nav>
+          )
+        }
+
+        {
+          (isProjects || isProjectDetail) && (
+            <nav className="hidden gap-8 text-sm text-slate-300 md:flex">
+              <a href="/" className="hover:text-white">{t("header.home")}</a>
+              <a href="/projects" className="hover:text-white">{t("header.projects")}</a>
+            </nav>
+          )
+        }
 
         <div className="hidden items-center gap-2 md:flex">
           <button

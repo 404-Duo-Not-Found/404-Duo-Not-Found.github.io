@@ -8,7 +8,8 @@
     "contact": "Contact",
     "menu": "Menu",
     "open_menu": "Open menu",
-    "close_menu": "Close menu"
+    "close_menu": "Close menu",
+    "home": "Home"
   },
   "about": {
     "eyebrow": "About Us",
@@ -147,6 +148,30 @@
     "cancel": "Cancel",
     "sending": "Sending...",
     "send": "Send"
+  },
+  "projectsPage": {
+    "title": "Projects",
+    "description": "Explore some of the projects and work developed."
+  },
+  "projects": {
+    "atlas": {
+      "tag": "Dashboard",
+      "title": "Project Atlas",
+      "description": "Management platform with metrics, tasks and team tracking.",
+      "content": "Project Atlas was built to centralize operational information and improve real-time metric visualization."
+    },
+    "nova": {
+      "tag": "Website",
+      "title": "Project Nova",
+      "description": "Institutional website focused on digital presence and conversion.",
+      "content": "Project Nova was designed to strengthen brand credibility and simplify communication with users."
+    },
+    "pulse": {
+      "tag": "Tool",
+      "title": "Project Pulse",
+      "description": "Internal tool for process automation.",
+      "content": "Project Pulse helped reduce repetitive work through internal automations and integrations."
+    }
   }
 
 }
