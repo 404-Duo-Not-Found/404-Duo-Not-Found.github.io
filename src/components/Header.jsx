@@ -85,11 +85,25 @@ export default function Header() {
       {open && (
         <div className="border-t border-white/10 px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4 text-sm text-slate-300">
-            <a href="#about" onClick={() => setOpen(false)}>{t("header.about")}</a>
-            <a href="#services" onClick={() => setOpen(false)}>{t("header.services")}</a>
-            <a href="#projects" onClick={() => setOpen(false)}>{t("header.projects")}</a>
-            <a href="#team" onClick={() => setOpen(false)}>{t("header.team")}</a>
-            <a href="#contact" onClick={() => setOpen(false)}>{t("header.contact")}</a>
+            {
+              isHome && (
+                <>
+                  <a href="#about" onClick={() => setOpen(false)}>{t("header.about")}</a>
+                  <a href="#services" onClick={() => setOpen(false)}>{t("header.services")}</a>
+                  <a href="#projects" onClick={() => setOpen(false)}>{t("header.projects")}</a>
+                  <a href="#team" onClick={() => setOpen(false)}>{t("header.team")}</a>
+                  <a href="#contact" onClick={() => setOpen(false)}>{t("header.contact")}</a>
+                </>
+              )
+            }
+
+            {(isProjects || isProjectDetail) && (
+              <>
+                <a href="/" onClick={() => setOpen(false)}>{t("header.home")}</a>
+                <a href="/projects" onClick={() => setOpen(false)}>{t("header.projects")}</a>
+              </>)
+
+            }
             <div className="flex items-center gap-2 pt-2">
               <button
                 type="button"

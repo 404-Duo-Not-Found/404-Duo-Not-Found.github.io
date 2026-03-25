@@ -1,27 +1,39 @@
 const projects = [
   {
-    id: 'atlas',
-    image: '/images/projects/atlas.png',
+    id: 'MentalEase',
+    image: '/images/projects/mental-ease.png',
     github: 'https://github.com/...',
-    demo: 'https://example.com/atlas',
+    demo: 'https://example.com/mental-ease',
     video: 'https://www.youtube.com/embed/...',
     featured: true,
+    progress: {
+      done: false,
+      value: 20
+    }
   },
   {
-    id: 'nova',
+    id: 'Sistema de elevadores',
     image: '/images/projects/nova.png',
     github: 'https://github.com/...',
     demo: 'https://example.com/nova',
     video: 'https://www.youtube.com/embed/...',
     featured: true,
+    progress: {
+      done: true,
+      value: 100
+    }
   },
   {
-    id: 'pulse',
+    id: 'Smart Home',
     image: '/images/projects/pulse.png',
     github: 'https://github.com/...',
     demo: 'https://example.com/pulse',
     video: '',
     featured: false,
+    progress: {
+      done: true,
+      value: 100
+    }
   },
 ]
 
