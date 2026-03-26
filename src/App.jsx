@@ -27,7 +27,7 @@ export default function App() {
 
         <main>
           <Routes>
-            <Route path="/#" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/projects/:id" element={<ProjectDetail />} />
             <Route path="*" element={<Home />} />

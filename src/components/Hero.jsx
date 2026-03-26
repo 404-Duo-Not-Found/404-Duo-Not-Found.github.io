@@ -1,5 +1,5 @@
-import {useTranslation} from 'react-i18next'
-import { ShieldCheck,Zap,Proportions,Wrench,Component,ChevronsUp } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
+import { ShieldCheck, Zap, Proportions, Wrench, Component, ChevronsUp } from 'lucide-react'
 
 const iconComponents = {
   '<ShieldCheck />': ShieldCheck,
@@ -13,7 +13,7 @@ const iconComponents = {
   '<Component />': Component,
   Component,
   '<ChevronsUp />': ChevronsUp,
-  ChevronsUp
+  ChevronsUp,
 }
 
 function renderSidePanelIcon(icon) {
@@ -22,22 +22,29 @@ function renderSidePanelIcon(icon) {
   const IconComponent = iconComponents[icon]
 
   if (IconComponent) {
-    return <IconComponent size={20} className="text-sky-300" aria-hidden="true" />
+    return (
+      <IconComponent
+        size={70}
+        strokeWidth={1.4}
+        className="text-white/20"
+        aria-hidden="true"
+      />
+    )
   }
 
   return <span aria-hidden="true">{icon}</span>
 }
 
 export default function Hero() {
-  const {t} = useTranslation()
-  const sidePanelTitle = t('hero.side_panel.title', {defaultValue: ''})
-  const sidePanelItems = t('hero.side_panel.items', {returnObjects: true, defaultValue: []})
+  const { t } = useTranslation()
+  const sidePanelTitle = t('hero.side_panel.title', { defaultValue: '' })
+  const sidePanelItems = t('hero.side_panel.items', { returnObjects: true, defaultValue: [] })
   const safeSidePanelItems = Array.isArray(sidePanelItems) ? sidePanelItems : []
 
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.16),transparent_30%),radial-gradient(circle_at_left,rgba(168,85,247,0.14),transparent_30%)]" />
-      
+
       <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-24 md:grid-cols-[1.2fr_0.8fr] md:py-32">
         <div>
           <p className="mb-4 inline-flex rounded-full border border-sky-400/20 bg-sky-400/10 px-4 py-2 text-sm text-sky-300">
@@ -70,17 +77,23 @@ export default function Hero() {
         </div>
 
         <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-glow">
-          {sidePanelTitle && <h2 className="mb-4 text-2xl font-bold text-white">{sidePanelTitle}</h2>}
+          {sidePanelTitle && (
+            <h2 className="mb-4 text-2xl font-bold text-white">{sidePanelTitle}</h2>
+          )}
 
           <div className="grid gap-4 sm:grid-cols-2">
             {safeSidePanelItems.map((item, index) => (
               <div
                 key={`${item.title}-${index}`}
-                className="rounded-2xl border border-white/10 bg-slate-900/70 p-5 
-                hover:bg-slate-800/50 hover:cursor-default hover:shadow-glow"
+                className="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/70 p-5 hover:cursor-default hover:bg-slate-800/50 hover:shadow-glow"
               >
-                <div className="text-sm ">{renderSidePanelIcon(item.icon)}</div>
-                <p className="mt-2 text-xl font-bold text-white ">{item.title}</p>
+                <div className="pointer-events-none absolute right-3 top-1/2 z-0 -translate-y-1/2">
+                  {renderSidePanelIcon(item.icon)}
+                </div>
+
+                <div className="relative z-10">
+                  <p className="text-xl font-bold text-white">{item.title}</p>
+                </div>
               </div>
             ))}
           </div>

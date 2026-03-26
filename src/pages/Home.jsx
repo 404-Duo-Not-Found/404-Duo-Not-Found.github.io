@@ -1,12 +1,8 @@
-import Header from '../components/Header'
-import Footer from '../components/footer'
-
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
 import Projects from '../components/Projects'
-import Team from '../components/Team'
-import Contact from '../components/Contact'
+import TeamContactSection from '../components/TeamContactSection'
 
 export default function Home() {
 
@@ -17,8 +13,7 @@ export default function Home() {
         <About />
         <Services />
         <Projects />
-        <Team />
-        <Contact />
+        <TeamContactSection />
       </main>
     </div>
   )
