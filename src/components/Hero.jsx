@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { ShieldCheck, Zap, Proportions, Wrench, Component, ChevronsUp } from 'lucide-react'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const iconComponents = {
   '<ShieldCheck />': ShieldCheck,
@@ -41,6 +42,30 @@ export default function Hero() {
   const sidePanelItems = t('hero.side_panel.items', { returnObjects: true, defaultValue: [] })
   const safeSidePanelItems = Array.isArray(sidePanelItems) ? sidePanelItems : []
 
+  const location = useLocation()
+  const navigate = useNavigate()
+  const currentRoute = location.pathname
+
+  const scrollToSection = (sectionId) => {
+    if (currentRoute !== '/') {
+      navigate('/')
+
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+
+      return
+    }
+
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.16),transparent_30%),radial-gradient(circle_at_left,rgba(168,85,247,0.14),transparent_30%)]" />
@@ -67,12 +92,11 @@ export default function Hero() {
               {t('hero.projects')}
             </a>
 
-            <a
-              href="#contact"
+            <button type="button" onClick={() => scrollToSection('team-contact')}
               className="rounded-xl border border-white/15 px-5 py-3 font-medium text-white transition hover:bg-white/5"
             >
               {t('hero.cta')}
-            </a>
+            </button>
           </div>
         </div>
 
