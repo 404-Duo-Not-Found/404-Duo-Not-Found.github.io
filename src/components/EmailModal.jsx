@@ -26,10 +26,10 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
 
     try {
       await emailjs.sendForm(
-        'service_tk8j4lm',
-        'template_8zlzxms',
+        'service_o1ki9yx',
+        'template_sznm7bt',
         formRef.current,
-        'hRPK9H6UtF-cvINm-'
+        'VomIIFmDoeq1ObBVg'
       )
 
       setStatus('success')
@@ -49,8 +49,8 @@ export default function EmailModal({ triggerText = 'Send an email from website' 
   return (
     <>
       <button
-        onClick={() => /* setIsOpen(true) */ e.preventDefault()}
-        className="rounded-xl border border-white/15 px-3 font-medium text-white transition hover:bg-white/5 cursor-not-allowed opacity-50"
+        onClick={() => setIsOpen(true)}
+        className="rounded-xl border border-white/15 px-3 font-medium text-white transition hover:bg-white/5 "
         
       >
         <Send />

@@ -16,9 +16,9 @@ export default function Contact() {
 
       <div className="mt-8 flex flex-wrap gap-4 text-slate-200">
         <a
-          className="rounded-xl bg-white px-5 py-3 font-medium text-slate-950 cursor-not-allowed opacity-50 hover:opacity-50"
-          href="mailto:404.duo.dev@gmail.com"
-          onClick={(e) => e.preventDefault()}
+          className="rounded-xl bg-white px-5 py-3 font-medium text-slate-950 hover:opacity-50"
+          href="mailto:dev.team.notfound.404@gmail.com"
+          target="_blank"
         >
           {t('contact.email')}
         </a>
@@ -27,7 +27,7 @@ export default function Contact() {
 
         <a
           className="rounded-xl border border-white/15 px-5 py-3 font-medium transition hover:bg-white/5"
-          href="https://github.com/orgs/404-Duo-Not-Found"
+          href="https://github.com/404TNF"
           target="_blank"
         >
           <FaGithub size={25} />

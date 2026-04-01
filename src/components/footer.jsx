@@ -43,7 +43,7 @@ export default function Footer() {
         
         <div>
           <p className="text-base font-semibold text-white">
-            404 Duo Not Found
+            404 Team Not Found
           </p>
           <p className="mt-2 max-w-md text-slate-400">
             Building modern digital experiences with clean design, strong performance and practical solutions.
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           <p className="text-slate-500">
-            © {year} 404 Duo Not Found. All rights reserved.
+            © {year} 404 Team Not Found. All rights reserved.
           </p>
         </div>
       </div>
